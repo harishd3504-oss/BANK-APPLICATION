@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SAIRAM BANK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login" id="registerView">
+  <div class="box">
+    <h2>Create Account</h2>
+
+    <input id="rUser" placeholder="Username">
+
+    <div class="pass-box">
+      <input id="rPass" type="password" placeholder="Password">
+      <i class="fa fa-eye" id="rEye"></i>
+    </div>
+
+    <div class="show" id="rShow">Show Password</div>
+    <div class="meter"><div id="rBar"></div></div>
+    <div id="rText" class="strength"></div>
+
+    <div class="phone">
+      <select id="countryCode"></select>
+      <input id="rMobile" placeholder="Mobile Number">
+    </div>
+
+    <input id="rAcc" placeholder="Account Number">
+    <input id="rIfsc" placeholder="IFSC Code">
+
+    <button id="registerBtn">Register</button>
+    <p id="toLogin">Already have an account?</p>
+  </div>
+</div>
+
+<div class="login" id="loginView" style="display:none">
+  <div class="box">
+    <h2>Login</h2>
+
+    <input id="lUser" placeholder="Username">
+
+    <div class="pass-box">
+      <input id="lPass" type="password" placeholder="Password">
+      <i class="fa fa-eye" id="lEye"></i>
+    </div>
+
+    <div class="show" id="lShow">Show Password</div>
+    <div class="meter"><div id="lBar"></div></div>
+    <div id="lText" class="strength"></div>
+
+    <button id="loginBtn">Login</button>
+  </div>
+</div>
+
+<div id="appView" style="display:none">
+  <header>
+    <div class="brand">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+      SAIRAM BANK
+    </div>
+    <div id="clock"></div>
+    <button id="logout">Logout</button>
+  </header>
+
+  <section class="account">
+    <div id="accno"></div>
+    <h1 id="balance"></h1>
+    <button id="toggleBal">Hide / Show</button>
+  </section>
+
+  <section class="actions">
+    <div class="panel">
+      <h3>Deposit</h3>
+      <input id="dAmt" type="number" value="0">
+      <div class="row">
+        <button id="dPlus">+</button>
+        <button id="dMinus">-</button>
+      </div>
+      <button id="depositBtn">Deposit</button>
+    </div>
+
+    <div class="panel">
+      <h3>Withdraw</h3>
+      <input id="purpose" placeholder="Purpose">
+      <input id="beneficiary" placeholder="Beneficiary">
+      <input id="wAmt" type="number" value="0">
+      <div class="row">
+        <button id="wPlus">+</button>
+        <button id="wMinus">-</button>
+      </div>
+      <button id="sendBtn">Send</button>
+    </div>
+  </section>
+
+  <section class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Type</th>
+          <th>Note</th>
+          <th>Amount</th>
+          <th>Bill</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
